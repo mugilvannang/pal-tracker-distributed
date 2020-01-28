@@ -3,7 +3,7 @@ applications:
   path: ./applications/timesheets-server/build/libs/timesheets-server.jar
   routes:
   - route: timesheet-pal-students-mugil.cfapps.io
-  memory: 1G
+  memory: 400M
   instances: 1
   env:
     REGISTRATION_SERVER_ENDPOINT: https://registration-pal-students-mugil.cfapps.io
