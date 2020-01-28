@@ -3,10 +3,11 @@ applications:
   path: ./applications/allocations-server/build/libs/allocations-server.jar
   routes:
   - route: allocation-pal-students-mugil.cfapps.io
-  memory: 400M
+  memory: 500M
   instances: 1
   env:
     REGISTRATION_SERVER_ENDPOINT: https://registration-pal-students-mugil.cfapps.io/
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
+    JAVA_OPTS: '-Xmx250m -Xss100m'
   services:
   - tracker-allocations-database
