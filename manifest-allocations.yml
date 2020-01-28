@@ -3,7 +3,7 @@ applications:
   path: ./applications/allocations-server/build/libs/allocations-server.jar
   routes:
   - route: allocation-pal-students-mugil.cfapps.io
-  memory: 500M
+  memory: 400M
   instances: 1
   env:
     REGISTRATION_SERVER_ENDPOINT: https://registration-pal-students-mugil.cfapps.io/
