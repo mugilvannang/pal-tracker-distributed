@@ -19,8 +19,10 @@ jobs:
       addons:
         mariadb: '10.2'
       install: skip
-      before_script:
-        - mysql -uroot < databases/create_databases.sql
+      before_install:
+        - chmod +x gradlew
+      before_script:        
+        - mysql -uroot < databases/create_databases.sql        
         - ./gradlew testMigrate
       script:
         - APPLICATION=allocations
